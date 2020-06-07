@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+.container {
+display: flex;
+flex-wrap: nowrap;
+align-items: stretch;
+justify-content: center;
+align-items: center;
+margin-top: 5em;
+color: darkred;
+margin-right: 11em;
+}
+.cssPentagram {
+width: 0;
+height: 0;
+position: relative;
+border-right: 100px solid transparent;
+border-bottom: 70px solid darkred;
+border-left: 100px solid transparent;
+animation-name: pentagramAnimation;
+animation-duration: 16s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+.cssPentagram::before{
+content: "";
+width: 0;
+height: 0;
+position: absolute;
+border-bottom: 80px solid darkred;
+border-left: 30px solid transparent;
+border-right: 30px solid transparent;
+top: -50px;
+left: -65px;
+transform: rotate(-35deg);
+}
+.cssPentagram::after {
+content: "";
+width: 0;
+height: 0;
+position: absolute;
+top: 3px;
+left: -105px;
+border-right: 100px solid transparent;
+border-bottom: 70px solid darkred;
+border-left: 100px solid transparent;
+transform: rotate(-70deg);
+}   
+@keyframes pentagramAnimation {
+from {}
+to {transform: rotate(360deg);}
+} 
+.firstSix {
+font-size: 5em;
+margin-right: 0.5em;
+opacity: 0;
+animation-name: firstSix;
+animation-duration: 16s;
+animation-iteration-count: infinite;
+}
+.lastSix {
+font-size: 5em;
+margin-left: 0.5em;
+opacity: 0;
+animation-name: lastSix;
+animation-duration: 16s;
+animation-iteration-count: infinite;
+}
+.bottomSix {
+font-size: 5em;
+margin-bottom: -4.5em;   
+margin-left: -2.6em;  
+opacity: 0;
+animation-name: bottomSix;
+animation-duration: 16s;
+animation-iteration-count: infinite;       
+}
+@keyframes firstSix {
+0% {opacity: 0;}
+25% {opacity: 0.5;}
+50% {opacity: 1;}
+75% {opacity: 0.5;}
+100% {opacity: 0;}
+}
+@keyframes lastSix {
+0% {opacity: 0;}
+25% {opacity: 0.5;}
+50% {opacity: 1;}
+75% {opacity: 0.5;}
+100% {opacity: 0;}
+}
+@keyframes bottomSix {
+0% {opacity: 0;}
+25% {opacity: 0.5;}
+50% {opacity: 1;}
+75% {opacity: 0.5;}
+100% {opacity: 0;}
+}
